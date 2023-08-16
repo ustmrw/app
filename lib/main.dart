@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [TabBar].
-
 void main() => runApp(const TabBarApp());
 
 class TabBarApp extends StatelessWidget {
@@ -23,20 +21,26 @@ class TabBarExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       initialIndex: 1,
-      length: 3,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('TabBar Sample'),
+          title: const Text('US + Earth'),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                icon: Icon(Icons.cloud_outlined),
+                icon: Icon(Icons.diversity_1),
               ),
               Tab(
-                icon: Icon(Icons.beach_access_sharp),
+                icon: Icon(Icons.currency_exchange),
               ),
               Tab(
-                icon: Icon(Icons.brightness_5_sharp),
+                icon: Icon(Icons.health_and_safety),
+              ),
+              Tab(
+                icon: Icon(Icons.where_to_vote),
+              ),
+              Tab(
+                icon: Icon(Icons.local_police),
               ),
             ],
           ),
@@ -44,13 +48,19 @@ class TabBarExample extends StatelessWidget {
         body: const TabBarView(
           children: <Widget>[
             Center(
-              child: Text("It's cloudy here"),
+              child: Text("SAFETY"),
             ),
             Center(
-              child: Text("It's rainy here"),
+              child: Text("MONEY"),
             ),
             Center(
-              child: Text("It's sunny here"),
+              child: Text("HEALTH"),
+            ),
+            Center(
+              child: Text("CIVICS"),
+            ),
+            Center(
+              child: Text("SERVE"),
             ),
           ],
         ),
