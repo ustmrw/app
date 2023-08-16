@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const UST());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class UST extends StatelessWidget {
+  const UST({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.mode_night), // Add your desired icon here
-            onPressed: () {
-              // Add your onPressed logic here
-            },
+            onPressed: _incrementCounter,
           ),
         ],
       ),
@@ -75,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: _incrementCounter,
                     child: const Text('ID'),
                   ),
                   const Text(
@@ -83,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: _incrementCounter,
                     child: const Text('Wallet'),
                   ),
                   const Text(
@@ -91,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: _incrementCounter,
                     child: const Text('Services'),
                   ),
                   const Text(
@@ -99,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: _incrementCounter,
                     child: const Text('Vote'),
                   ),
                 ],
