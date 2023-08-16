@@ -15,7 +15,12 @@ class TabBarApp extends StatelessWidget {
 }
 
 class TabBarExample extends StatelessWidget {
-  const TabBarExample({super.key});
+  const TabBarExample({Key? key}) : super(key: key);
+
+  final TextStyle headlineStyle = const TextStyle(
+    fontSize: 36,
+    fontWeight: FontWeight.bold,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +29,7 @@ class TabBarExample extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('US + Earth'),
+          title: const Text('US+'),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
@@ -45,22 +50,27 @@ class TabBarExample extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: <Widget>[
-            Center(
-              child: Text("SAFETY"),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text("SAFETY", style: headlineStyle),
             ),
-            Center(
-              child: Text("MONEY"),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text("MONEY", style: headlineStyle),
             ),
-            Center(
-              child: Text("HEALTH"),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text("HEALTH", style: headlineStyle),
             ),
-            Center(
-              child: Text("CIVICS"),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text("CIVICS", style: headlineStyle),
             ),
-            Center(
-              child: Text("SERVE"),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text("SERVE", style: headlineStyle),
             ),
           ],
         ),
